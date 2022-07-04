@@ -24,6 +24,9 @@ Route::get('/dashboard', function () {
     return 'dashboard';
 });
 
+Route::get('/redirect/{services}', 'SocialController@redirect');
+
+Route::get('/callback/{services}', 'SocialController@callback');
 
 // -----------------------------------------------------------
 
