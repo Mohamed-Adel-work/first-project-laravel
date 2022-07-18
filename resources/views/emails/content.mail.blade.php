@@ -71,22 +71,10 @@
 
       <div class="content">
         <div class="title m-b-md">
-          Laravel
+          {{$details['title']}}
         </div>
 
-        <h1>{{__('messages.welcome')}}</h1>
-
-        {{-- <p>{{ $name }} : {{ $age }} -- {{ $id }}</p> --}}
-
-        {{-- <p>{{ $obj->name }} : {{ $obj->age }} -- {{ $obj->id }}</p> --}}
-
-        {{-- @if ($name == 'Mohamed Adel')
-          <p>this is name is correct</p>
-        @endif --}}
-
-        {{-- @foreach ($data as $_data)
-          <p>{{ $_data }}</p>
-        @endforeach --}}
+        <p>{{$details['topic']}}</p>
 
       </div>
     </div>
