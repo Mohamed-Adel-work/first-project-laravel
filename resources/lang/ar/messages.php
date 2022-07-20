@@ -17,5 +17,16 @@ return [
     'welcome' => 'مرحباً',
     'offer name is required' => 'اسم العرض مطلوب',
     'offer name must be unique' => 'اسم العرض موجود',
-
+    'Add your offer' => 'اضف عرضك',
+    'Offer name' => 'اسم العرض',
+    'Offer name in arabic' => 'اسم العرض بالعربي',
+    'Offer name in english' => 'اسم العرض بالانجليزي',
+    'Offer price' => 'سعر العرض',
+    'Offer details' => 'تفاصيل العرض',
+    'Offer details in arabic' => 'تفاصيل العرض بالعربي',
+    'Offer details in english' => 'تفاصيل العرض بالانجليزي',
+    'Save' => 'حفظ',
+    'The offer price must be numbers' => 'يجب أن يكون سعر العرض أرقامًا',
+    'Price is required' => 'السعر مطلوب',
+    'Details is required' => 'ألتفاصيل مطلوبة',
 ];
