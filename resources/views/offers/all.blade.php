@@ -105,16 +105,19 @@
                 <th scope="col">{{__('messages.Offer name')}}</th>
                 <th scope="col">{{__('messages.Offer price')}}</th>
                 <th scope="col">{{__('messages.Offer details')}}</th>
+                <th scope="col">{{__('messages.Operations')}}</th>
             </tr>
         </thead>
+
         <tbody>
 
             @foreach ($offers as $offer)
                 <tr>
-                    <th scope="row">{{$offer -> id}}</th>
-                    <td>{{$offer -> name}}</td>
-                    <td>{{$offer -> price}}</td>
-                    <td>{{$offer -> details}}</td>
+                    <th scope="row">{{$offer->id}}</th>
+                    <td>{{$offer->name}}</td>
+                    <td>{{$offer->price}}</td>
+                    <td>{{$offer->details}}</td>
+                    <td><a href="{{url('offers/edit/'.$offer->id)}}" class="btn btn-success">{{__('messages.Edit')}}</a></td>
                 </tr>
             @endforeach
 

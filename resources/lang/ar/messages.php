@@ -29,4 +29,7 @@ return [
     'The offer price must be numbers' => 'يجب أن يكون سعر العرض أرقامًا',
     'Price is required' => 'السعر مطلوب',
     'Details is required' => 'ألتفاصيل مطلوبة',
+    'Operations' => 'العمليات',
+    'Edit' => 'تعديل',
+    'Edit your offer' => 'تعديل منتجك',
 ];

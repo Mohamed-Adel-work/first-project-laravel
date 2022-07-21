@@ -100,7 +100,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                {{__('messages.Add your offer')}}
+                {{__('messages.Edit your offer')}}
             </div>
 
             @if (Session::has('success'))
@@ -109,23 +109,14 @@
 
             <br />
 
-            <form method="POST" action="{{route('offers.store')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('offers.update',$offer->id)}}">
 
                 @csrf
                 {{-- <input name="_token" value="{{csrf_token()}}" /> --}}
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">اختر صوؤة العرض</label>
-                    <input type="file" class="form-control" name="photo" />
-
-                    @error('photo')
-                    <small class="form-text text-danger">{{$message}}</small>
-                    @enderror
-                </div>
-
-                <div class="form-group">
                     <label for="exampleInputEmail1">{{__('messages.Offer name in arabic')}}</label>
-                    <input type="text" class="form-control" name="name_ar" placeholder="{{__('messages.Offer name in arabic')}}" />
+                    <input type="text" class="form-control" name="name_ar" value="{{$offer->name_ar}}" placeholder="{{__('messages.Offer name in arabic')}}" />
 
                     @error('name_ar')
                     <small class="form-text text-danger">{{$message}}</small>
@@ -134,7 +125,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">{{__('messages.Offer name in english')}}</label>
-                    <input type="text" class="form-control" name="name_en" placeholder="{{__('messages.Offer name in english')}}" />
+                    <input type="text" class="form-control" name="name_en" value="{{$offer->name_en}}" placeholder="{{__('messages.Offer name in english')}}" />
 
                     @error('name_en')
                     <small class="form-text text-danger">{{$message}}</small>
@@ -143,7 +134,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">{{__('messages.Offer price')}}</label>
-                    <input type="number" class="form-control" name="price" placeholder="{{__('messages.Offer price')}}" />
+                    <input type="number" class="form-control" name="price" value="{{$offer->price}}" placeholder="{{__('messages.Offer price')}}" />
 
                     @error('price')
                     <small class="form-text text-danger">{{$message}}</small>
@@ -152,7 +143,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">{{__('messages.Offer details in arabic')}}</label>
-                    <input type="text" class="form-control" name="details_ar" placeholder="{{__('messages.Offer details in arabic')}}" />
+                    <input type="text" class="form-control" name="details_ar" value="{{$offer->details_ar}}" placeholder="{{__('messages.Offer details in arabic')}}" />
 
                     @error('details_ar')
                     <small class="form-text text-danger">{{$message}}</small>
@@ -161,7 +152,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">{{__('messages.Offer details in english')}}</label>
-                    <input type="text" class="form-control" name="details_en" placeholder="{{__('messages.Offer details in english')}}" />
+                    <input type="text" class="form-control" name="details_en" value="{{$offer->details_en}}" placeholder="{{__('messages.Offer details in english')}}" />
 
                     @error('details_en')
                     <small class="form-text text-danger">{{$message}}</small>

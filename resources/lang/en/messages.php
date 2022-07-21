@@ -29,4 +29,7 @@ return [
     'The offer price must be numbers' => 'The offer price must be numbers',
     'Price is required' => 'price is required',
     'Details is required' => 'Details is required',
+    'Operations' => 'Operations',
+    'Edit' => 'Edit',
+    'Edit your offer' => 'Edit your offer',
 ];
